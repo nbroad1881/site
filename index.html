@@ -1,9 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="refresh" content="0; url=https://nbroad-me.hf.space" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pretty Domain</title>
+    <style>
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .fallback-message {
+            display: none;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        iframe:not(:loading) ~ .fallback-message {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <p>Redirecting to <a href="https://nbroad-me.hf.space">https://nbroad-me.hf.space</a>...</p>
+    <div class="iframe-container">
+        <iframe src="https://nbroad-me.hf.space" 
+                title="Nicholas Broad"
+                sandbox="allow-same-origin allow-scripts allow-popups allow-forms">
+        </iframe>
+        <div class="fallback-message">
+            If you're seeing this message, the content couldn't be loaded. 
+            Please visit <a href="https://nbroad-me.hf.space">https://nbroad-me.hf.space</a> directly.
+        </div>
+    </div>
 </body>
 </html>
